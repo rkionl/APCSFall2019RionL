@@ -109,9 +109,9 @@ public class Calculate {
 		
 		// absValue
 		// Accepts a double and returns the absolute value as a double
-		public static double absValue(double a) {
-			if (a > 0 )
-		}
+// static double absValue(double a) {
+	//		if (a > 0 )
+//		}
 	} 
 	
 
