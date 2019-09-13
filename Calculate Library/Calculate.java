@@ -109,9 +109,54 @@ public class Calculate {
 		
 		// absValue
 		// Accepts a double and returns the absolute value as a double
-// static double absValue(double a) {
-	//		if (a > 0 )
-//		}
+        public static double absValue(double input) {
+		if (input > 0 )
+			return  input;
+		else
+			return input * -1;
+        }
+		
+		//max
+		//Returns the larger of the values past
+		//Accepts a double and returns a double
+		public static double max(double input1, double input2) {
+			if (input1 > input2)
+				return input1;
+			else 
+				return input2;
+			}
+		
+		//max
+		//Returns the larger of the values passed
+		//Overload the max method to accept three doubles instead of two
+		public static double max(double input1, double input2, double input3) {
+			if (input1 > input2 && input1 > input3)
+				return input1;
+			if  (input2 > input3)
+					return input2;
+				else
+					return input3;
+		}
+		
+		//Min
+		//returns the lesser of the values passed
+		//Accepts two integers and returns the smaller one
+		public static int min(int input1, int input2) {
+			if (input1 < input2)
+				return input1;
+			else 
+				return input2;
+		}
+		
+		//round2
+		//Rounds a double correctly to two decimal places
+		//Accepts a double and returns a double
+		public static double round2(double input) { 
+			middle = (input * 100 +0.5);
+			answer = (int)middle / 100;
+			return answer;
+			
+		}
 	} 
 	
 

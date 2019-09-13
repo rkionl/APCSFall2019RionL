@@ -22,8 +22,10 @@ public class DoMath {
 	
 		System.out.println(Calculate.isDivisibleBy(4, 2)); 
 		System.out.println(Calculate.absValue(-5));
-		
-		
+		System.out.println(Calculate.max(2, 7));
+		System.out.println(Calculate.max(5, 7, 9));
+		System.out.println(Calculate.min(2, 7));
+		System.out.println(Calculate.round2(100.723))
 		
 	}
 
