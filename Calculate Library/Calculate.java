@@ -152,11 +152,31 @@ public class Calculate {
 		//Rounds a double correctly to two decimal places
 		//Accepts a double and returns a double
 		public static double round2(double input) { 
-			middle = (input * 100 +0.5);
-			answer = (int)middle / 100;
+			double middle = (input * 100 +0.5);
+			double answer =  ((int)middle) / 100.0;
 			return answer;
 			
 		}
-	} 
+		
+		//exponent
+		//Uses loops to call methods 
+		//accepts a double and returns a double
+		public static double exponent(double base, int power) {
+			
+			double answer = 1;
+			for (int i = 1; i <= power; i++) { 
+				answer = answer * base;
+			}
+				return answer; 
+		}
+		//factorial
+		//it returns the factorial of the value passed
+		// accepts integer and returns an integer
+		//public static int factorial(int input) {
+			//int answer = 0; 
+			//for (int i)
+		//}
+		
+		}
 	
 
