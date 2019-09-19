@@ -99,11 +99,11 @@ public class Calculate {
 		//isDivisibleBy
 		// Finds out if an integer is divisible by another
 		// Accepts two integers and returns a true or false
-		public static String isDivisibleBy(int a, int b) {
+		public static Boolean isDivisibleBy(int a, int b) {
 			if (a % b == 0 )
-				return "True";
+				return true;
 				else
-					return "False";
+					return false;
 		}
 		
 		
@@ -174,11 +174,31 @@ public class Calculate {
 		// accepts integer and returns an integer
 		public static int factorial(int input) {
 			int answer = 1; 
-			for (int i = 1; i<= input; i++)
-			answer = answer * i;
+			for (int i = 1; i<= input; i++) {
+				answer = answer * i;
 			}
 				return answer;
-		
 		}
-	
+		
+		//isPrime
+		//Checks to see if integer is Prime or not
+		public static boolean isPrime(int input) {
+			
+			for (int i = 2; i < input; i++) {
+				if(isDivisibleBy(input, i)) {
+					return false;
+				}
+			}
+			return true;
+			
+			
+		}
+		//gcf
+		//finds the greatest common factor between two integers
+		//accepts two positive integers and returns an integer.
+		public static int gcf(int int1, int int2) {
+			for (int i = 1; i < absValue(int int1, int int2)); {
+		}
+}
 
+		

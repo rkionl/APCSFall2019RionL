@@ -31,7 +31,8 @@ public class DoMath {
 		//Part 3
 		
 		System.out.println(Calculate.exponent(2.0, 2));
-		
+		System.out.println(Calculate.factorial(4));
+		System.out.println(Calculate.isPrime(17));
 	}
 
 }
