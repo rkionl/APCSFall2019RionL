@@ -172,10 +172,12 @@ public class Calculate {
 		//factorial
 		//it returns the factorial of the value passed
 		// accepts integer and returns an integer
-		//public static int factorial(int input) {
-			//int answer = 0; 
-			//for (int i)
-		//}
+		public static int factorial(int input) {
+			int answer = 1; 
+			for (int i = 1; i<= input; i++)
+			answer = answer * i;
+			}
+				return answer;
 		
 		}
 	
