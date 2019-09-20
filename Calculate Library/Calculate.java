@@ -197,7 +197,12 @@ public class Calculate {
 		//finds the greatest common factor between two integers
 		//accepts two positive integers and returns an integer.
 		public static int gcf(int int1, int int2) {
-			for (int i = 1; i < absValue(int int1, int int2)); {
+			int factor = 1; 
+			for (int i = 1; i <= absValue((min(int1,  int2))) i++); {
+				if isDivisibleBy((int1, i) == true && isDivisibleBy(int2,i) == true) { 
+					factor = i;
+				}
+				return factor;
 		}
 }
 
