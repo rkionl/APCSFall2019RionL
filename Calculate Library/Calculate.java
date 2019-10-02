@@ -100,52 +100,64 @@ public class Calculate {
 		// Finds out if an integer is divisible by another
 		// Accepts two integers and returns a true or false
 		public static Boolean isDivisibleBy(int a, int b) {
-			if (a % b == 0 )
+			if (b==0) {
+				throw new IllegalArgumentException("invalid input");		
+			}
+			if (a % b == 0 ) {
 				return true;
-				else
+			}
+				else {
 					return false;
+			}
 		}
 		
 		
 		// absValue
 		// Accepts a double and returns the absolute value as a double
         public static double absValue(double input) {
-		if (input > 0 )
+		if (input > 0 ) {
 			return  input;
-		else
+		    }
+		else {
 			return input * -1;
+            }
         }
-		
 		//max
 		//Returns the larger of the values past
 		//Accepts a double and returns a double
 		public static double max(double input1, double input2) {
-			if (input1 > input2)
+			if (input1 > input2) {
 				return input1;
-			else 
+			}
+			else {
 				return input2;
 			}
-		
+		}
 		//max
 		//Returns the larger of the values passed
 		//Overload the max method to accept three doubles instead of two
 		public static double max(double input1, double input2, double input3) {
-			if (input1 > input2 && input1 > input3)
+			if (input1 > input2 && input1 > input3) {
 				return input1;
-			if  (input2 > input3)
+		    }
+			if  (input2 > input3) {
 					return input2;
-				else
+			}
+			else {
 					return input3;
+			}
 		}
 		
 		//Min
 		//returns the lesser of the values passed
 		//Accepts two integers and returns the smaller one
-		public static int min(int input1, int input2) {
-			if (input1 < input2)
+		public static double min(double input1, double input2) {
+			if (input1 < input2) {
 				return input1;
-			else 
+			}
+			else { 
 				return input2;
+			}
 		}
 		
 		//round2
@@ -162,7 +174,10 @@ public class Calculate {
 		//Uses loops to call methods 
 		//accepts a double and returns a double
 		public static double exponent(double base, int power) {
-			
+			if (power < 0) {
+				throw new IllegalArgumentException("invalid input");
+				
+			}
 			double answer = 1;
 			for (int i = 1; i <= power; i++) { 
 				answer = answer * base;
@@ -197,13 +212,52 @@ public class Calculate {
 		//finds the greatest common factor between two integers
 		//accepts two positive integers and returns an integer.
 		public static int gcf(int int1, int int2) {
-			int factor = 1; 
-			for (int i = 1; i <= absValue((min(int1,  int2))) i++); {
-				if isDivisibleBy((int1, i) == true && isDivisibleBy(int2,i) == true) { 
-					factor = i;
+			int factor = 1;
+			for (int i = 1; i <= absValue((min(int1, int2))); i++) {
+				if(isDivisibleBy(int1, i) ==true && isDivisibleBy(int2, i) ==true) {
+					factor = i;}
 				}
-				return factor;
+			return factor; 
 		}
-}
+		//sqrt
+		//Finds the Square root of a value to 2 decimal places
+		//Accepts an double and returns a double
+		public static double sqrt(double input) {
+			if ( input < 0 ) {
+				throw new IllegalArgumentException("invalid input");
+			}
+			double check = 1;
+			while(absValue(input - check * check)> 0.005) {
+				check = 0.5*(input/check+check);
+			}
+			return round2(check);
+		}
+		//quadform
+		//uses the coeffients of a quadratic equation in standard form and uses
+		//the quadratic formula to approximate the real roots if any.
+		//Accepts three integers and returns a string
+		public static String quadForm(int a, int b, int c) {
+			//Throw exception if the a value is 0 in this code segment
+			double root1 = 0; 
+			double root2 = 0;
+			if(a == 0) { 
+				throw new IllegalArgumentException("invalid input");
+			}
+			if (discriminant(a, b, c) < 0) {
+				return "no real roots";
+			}
+			else if (discriminant(a, b, c) == 0 ) { 
+				root1 = (-b/(2 *a));
+				return root1 + "";	
+			}	
+			else  {
+		    root1 = round2(-b + (sqrt(discriminant(a, b, c))) / (2.0 * a));
+			root2 = round2(-b - (sqrt(discriminant(a, b, c))) / (2.0 * a));
+ 				return min(root1, root2) + " and " +  max(root1, root2);
+			}		
+		}
+	}
+
 
 		
+

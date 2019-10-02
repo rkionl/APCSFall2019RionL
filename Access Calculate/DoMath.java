@@ -33,6 +33,12 @@ public class DoMath {
 		System.out.println(Calculate.exponent(2.0, 2));
 		System.out.println(Calculate.factorial(4));
 		System.out.println(Calculate.isPrime(17));
+		System.out.println(Calculate.gcf(4, 12));
+		System.out.println(Calculate.sqrt(81.0));
+		
+		//Part 4 
+		System.out.println(Calculate.quadForm(2,4,-6));
 	}
 
 }
+
